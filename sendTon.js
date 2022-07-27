@@ -7,7 +7,7 @@ const BN = TonWeb.utils.BN;
 
 const { toUint8Array, delay } = require('./utils')
 
-const isMainnet = process.env.MAIN_NET
+const isMainnet = process.env.NETWORK === 'main'
 
 const argv = yargs
     .options('seed', {
@@ -88,7 +88,7 @@ async function doWithdraw(amount, toAddress, payload = undefined) {
         toAddress = new TonWeb.utils.Address(toAddress).toString(true, true, false);
     }
 
-    const seqno = await wallet.methods.seqno().call()
+    const seqno = await (wallet.methods.seqno().call()) || 0
     await delay(1111)
 
     const transfer = await wallet.methods.transfer({
