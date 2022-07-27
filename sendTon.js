@@ -98,7 +98,7 @@ async function doWithdraw(amount, toAddress, payload = undefined) {
         amount,
         payload
     });
-    await delay(2000)
+    await delay(1111)
 
 
     await transfer.send();
