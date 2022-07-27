@@ -13,17 +13,17 @@ npm run seed-to-key -- -s SEED_PHRASE
 
 Send TON using seed:
 ```
-npm run withdraw -- -s SEED_PHRASE --amount 0.1 --to EQAfi_IcjRyIwFG6fbg89_t8PhnaGSM0sO1pg1LRJaIONBza
+npm run withdraw -- -s SEED_PHRASE --amount 0.1 --to EQAfi_IcjRyIwFG6fbg89_t8PhnaGSM0sO1pg1LRJaIONBza -p comment
 ```
 
 Send TON using Secret Key:
 ```
-npm run withdraw -- --sk SECRET_KEY --amount 0.1 --to EQAfi_IcjRyIwFG6fbg89_t8PhnaGSM0sO1pg1LRJaIONBza
+npm run withdraw -- --sk SECRET_KEY --amount 0.1 --to EQAfi_IcjRyIwFG6fbg89_t8PhnaGSM0sO1pg1LRJaIONBza -p comment
 ```
 
 Also, could be used without npm scripts just like that:
 ```
 node seedToKeyPair.js -s your seed
-node sendTon.js -s SEED_PHRASE --amount 0.1 --to EQAfi_IcjRyIwFG6fbg89_t8PhnaGSM0sO1pg1LRJaIONBza
-node sendTon.js --sk SECRET_KEY --amount 0.1 --to EQAfi_IcjRyIwFG6fbg89_t8PhnaGSM0sO1pg1LRJaIONBza
+node sendTon.js -s SEED_PHRASE --amount 0.1 --to EQAfi_IcjRyIwFG6fbg89_t8PhnaGSM0sO1pg1LRJaIONBza -p comment
+node sendTon.js --sk SECRET_KEY --amount 0.1 --to EQAfi_IcjRyIwFG6fbg89_t8PhnaGSM0sO1pg1LRJaIONBza -p comment
 ```

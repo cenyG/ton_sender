@@ -5,7 +5,7 @@ function toHexString(byteArray) {
 }
 
 function toUint8Array(str) {
-    const buf = new ArrayBuffer(str.length/2); // 2 bytes for each char
+    const buf = new ArrayBuffer(str.length/2);
     const bufView = new Uint8Array(buf);
 
     let tmpChar = ''
